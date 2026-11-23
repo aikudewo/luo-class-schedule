@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#c0397c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="浩维课表">
+<meta name="description" content="骆浩维的 2026-2027 学年第一学期课表，支持按周查看、今日课程、离线使用，可添加到手机主屏幕。">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
+<title>浩维课表 · 骆浩维</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="app">
+  <header class="hero" id="hero"></header>
+  <main id="view" class="view"></main>
+  <nav class="tabbar" id="tabbar">
+    <button class="tab active" data-tab="today" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v15H4zM8 3v4m8-4v4M4 10h16"/></svg>
+      <span>今天</span>
+    </button>
+    <button class="tab" data-tab="week" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9h18M7 3v4m10-4v4M5 5h14v15H5z"/></svg>
+      <span>本周</span>
+    </button>
+    <button class="tab" data-tab="courses" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v17H6.5A2.5 2.5 0 0 1 4 17.5zM8 7h8M8 11h8M8 15h5"/></svg>
+      <span>课程</span>
+    </button>
+    <button class="tab" data-tab="settings" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.83 2.83-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 1.56V21H10v-.09A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.56-1H3v-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.88l-.06-.06 2.83-2.83.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.56V3h4v.09A1.7 1.7 0 0 0 15 4.6a1.7 1.7 0 0 0 1.88-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.4 9v.01a1.7 1.7 0 0 0 1.56 1H21v4h-.09A1.7 1.7 0 0 0 19.4 15z"/></svg>
+      <span>设置</span>
+    </button>
+  </nav>
+</div>
+
+<div class="sheet-mask" id="sheetMask" hidden></div>
+<section class="sheet" id="sheet" hidden aria-label="课程详情"></section>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="./app.js"></script>
+</body>
+</html>
